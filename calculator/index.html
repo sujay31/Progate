@@ -3,39 +3,39 @@
 <head>
     <meta charset="utf-8">
     <title> Calculator </title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type = "text/css" href="css/styles.css">
 </head>
 <body>
     <div class = "calculator">
-        <input type = "text" class = "calculator-screen" value = "0" disabled>
+        <input type = "text" class = "calculator-screen" id="screen" value="0">
         <div class = "calculator-keys">
             <div class = "row">
-                <button class = "all-clear"> AC </button>
-                <button class = "percentage"> % </button>
-                <button class = "operator" value = "/"> &divide; </button>
+                <button class = "all-clear" id="ac" onclick="allClear();" disabled> AC </button>
+                <button class = "percentage" id="modulus" onclick="operatorPressed('%');"> % </button>
+                <button class = "operator" id="division" value = "/" onclick="operatorPressed('/');"> &divide; </button>
             </div>
             <div class = "row">
-                <button class = "number" value = "7"> 7 </button>
-                <button class = "number" value = "8"> 8 </button>
-                <button class = "number" value = "9"> 9 </button>
-                <button class = "operator" value = "*"> &times; </button>
+                <button class = "number" id="seven" value = "7" onclick="numberPressed('7');"> 7 </button>
+                <button class = "number" id="eight" value = "8" onclick="numberPressed('8');"> 8 </button>
+                <button class = "number" id="nine" value = "9" onclick="numberPressed('9');"> 9 </button>
+                <button class = "operator" id="multiplication" value = "*" onclick="operatorPressed('*');"> &times; </button>
             </div>
             <div class = "row">
-                <button class = "number" value = "4"> 4 </button>
-                <button class = "number" value = "5"> 5 </button>
-                <button class = "number" value = "6"> 6 </button>
-                <button class = "operator" value = "-"> - </button>
+                <button class = "number" id="four" value = "4" onclick="numberPressed('4');"> 4 </button>
+                <button class = "number" id="five" value = "5" onclick="numberPressed('5');"> 5 </button>
+                <button class = "number" id="six" value = "6" onclick="numberPressed('6');"> 6 </button>
+                <button class = "operator" id="subtraction" value = "-" onclick="operatorPressed('-');"> - </button>
             </div>
             <div class = "row">
-                <button class = "number" value = "1"> 1 </button>
-                <button class = "number" value = "2"> 2 </button>
-                <button class = "number" value = "3"> 3 </button>
-                <button class = "operator" value = "+"> + </button>
+                <button class = "number" id="one" value = "1" onclick="numberPressed('1');"> 1 </button>
+                <button class = "number" id="two" value = "2" onclick="numberPressed('2');"> 2 </button>
+                <button class = "number" id="three" value = "3" onclick="numberPressed('3');"> 3 </button>
+                <button class = "operator" id="addition" value = "+" onclick="operatorPressed('+');"> + </button>
             </div>
             <div class = "row">
-                <button class = "number zero-btn" value = "0"> 0 </button>
-                <button class = "decimal" value = "."> . </button>
-                <button class = "equal-sign"> = </button>
+                <button class = "number zero-btn" id="zero" value = "0" onclick="numberPressed('0');"> 0 </button>
+                <button class = "decimal" id="decimal" value = "." onclick="numberPressed('.');" disabled> . </button>
+                <button class = "equal-sign" id="equals" onclick="solve();"> = </button>
             </div>
         </div>
     </div>
